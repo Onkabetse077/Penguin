@@ -8,12 +8,11 @@ body{
     overflow: hidden;
   }
 
-    /*Step 7,8,9*/
-  .ground{
-    width: 100vw;
-    height: 400px;
-    background: linear-gradient(90deg, rgb(88, 175, 236), rgb(182, 255, 255));
-    z-index:3;
+  /*Step 14,15*/
+  .left-mountain{
+    width: 300px;
+    height: 300px;
+    background:linear-gradient(rgb(203, 241, 228), rgb(80, 183, 255));
     position:absolute;
   }
 
@@ -23,4 +22,13 @@ body{
     height: 300px;
     margin:auto;
     margin-top:75px;
+  }
+
+    /*Step 7,8,9*/
+  .ground{
+    width: 100vw;
+    height: 400px;
+    background: linear-gradient(90deg, rgb(88, 175, 236), rgb(182, 255, 255));
+    z-index:3;
+    position:absolute;
   }
