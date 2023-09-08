@@ -19,12 +19,23 @@ body{
     margin-top:100px;
   }
 
-  /*Step 20,21*/
+  /*Step 20,21,22,23*/
   .back-mountain{
     width: 300px;
     height: 300px;
     background: linear-gradient(rgb(203, 241, 228), rgb(47, 170, 255));
     position: absolute;
+    z-index: 1;
+    transform:rotate(45deg);
+    left:110px;
+    top:225px;
+  }
+
+    /*Step 25*/
+  .sun{
+    width: 200px;
+    height: 200px;
+    background-color:yellow;
   }
 
   /*Step 11,12*/
