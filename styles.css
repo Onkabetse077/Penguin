@@ -31,19 +31,33 @@ body{
     top:225px;
   }
 
-    /*Step 25*/
+    /*Step 25,26,27*/
   .sun{
     width: 200px;
     height: 200px;
     background-color:yellow;
+    position:absolute;
+    border-radius:50%;
+    top:-75px;
+    right:-75px;
   }
 
-  /*Step 11,12*/
+  /*Step 11,12,29*/
   .penguin{
     width: 300px;
     height: 300px;
     margin:auto;
     margin-top:75px;
+    position:relative;
+    z-index: 4
+  }
+
+  /*Step 30,31*/
+  .penguin-head{
+    width:50%;
+    height:45%;
+    background: linear-gradient(45deg,gray, rgb(239, 240, 228));
+    border-radius:70% 70% 65% 65%;
   }
 
     /*Step 7,8,9,18*/
