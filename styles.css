@@ -1,3 +1,8 @@
+/*Step 54*/
+:root{
+  --penguin-face:white;
+}
+
 /*Step 2,3,4,5*/
 body{
     background:linear-gradient(45deg, rgb(118, 201, 255), rgb(247, 255, 222));
@@ -68,6 +73,35 @@ body{
     z-index:1;
   }
 
+  /*Step 45,46,47,55*/
+  .face{
+    width: 60%;
+    height: 70%;
+    background-color: var(--penguin-face);
+    border-radius:70% 70% 60% 60%;
+    top:15%;
+  }
+
+  /*Step 49*/
+  .face.left{
+    left:5%;
+    }
+
+    /*Step 50*/
+    .face.right {
+      right: 5%;
+    }
+
+    /*Step 52,53,55*/
+    .chin{
+      width:90%;
+      height:70%;
+      background-color: var(--penguin-face);
+      top:25%;
+      left:5%;
+      border-radius:70% 70% 100% 100%;
+    }
+
   /*Step 32,33,36*/
   .penguin-body{
   width: 53%;
@@ -83,7 +117,7 @@ body{
   left: 23.5%;
 }
 
-/*Step 38,39,40,41*/
+/*Step 38,39,40,41,42,43*/
 .penguin-body::before{
   content:"";
   position:absolute;
@@ -92,6 +126,8 @@ body{
   background-color:gray;
   top:10%;
   left:25%;
+  border-radius: 0% 0% 100% 100%;
+  opacity:70%;
   }
 
     /*Step 7,8,9,18*/
