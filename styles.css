@@ -1,6 +1,8 @@
-/*Step 54*/
+/*Step 54,82,88*/
 :root{
   --penguin-face:white;
+  --penguin-picorna:orange;
+  --penguin-skin:gray;
 }
 
 /*Step 2,3,4,5*/
@@ -55,6 +57,9 @@ body{
     margin-top:75px;
     position:relative;
     z-index: 4
+    transition-duration: 1s;
+    transition-timing-function:ease-in-out;
+    transition-delay:0ms;
   }
 
   /*Step 34*/
@@ -62,18 +67,24 @@ body{
     position:absolute;
   }
 
-  /*Step 30,31,35,37*/
+  /*Step 101,102*/
+  .penguin:active{
+    transform:scale(1.5);
+    cursor:not-allowed;
+    }
+
+  /*Step 30,31,35,37,88*/
   .penguin-head{
     width:50%;
     height:45%;
-    background: linear-gradient(45deg,gray, rgb(239, 240, 228));
+    background: linear-gradient(45deg,var(--penguin-skin), rgb(239, 240, 228));
     border-radius:70% 70% 65% 65%;
     top:10%;
     left:25%;
     z-index:1;
   }
 
-  /*Step 45,46,47,55*/
+  /*Step 45,46,47,55,82*/
   .face{
     width: 60%;
     height: 70%;
@@ -150,11 +161,11 @@ body{
       right: 15%;
     }
 
-    /*Step 68*/
+    /*Step 68,82*/
     .beak{
       height:10%;
       border-radius: 50%;
-      background-color:orange;
+      background-color: var(--penguin-picorna);
     }
 
     /*Step 69*/
@@ -202,25 +213,97 @@ body{
   left: 23.5%;
 }
 
-/*Step 38,39,40,41,42,43*/
+/*Step 38,39,40,41,42,43,88*/
 .penguin-body::before{
   content:"";
   position:absolute;
   width:50%;
   height:45%;
-  background-color:gray;
+  background-color:var(--penguin-skin);
   top:10%;
   left:25%;
   border-radius: 0% 0% 100% 100%;
   opacity:70%;
   }
 
-    /*Step 7,8,9,18*/
+  /*Step 87,88,93,94*/
+  .arm{
+    width:30%;
+    height:60%;
+    background: linear-gradient(
+      90deg,
+      var(--penguin-skin),
+      rgb(209, 210, 199)
+    );
+    border-radius: 30% 30% 30% 120%;
+    z-index:-1;
+  }
+
+  /*Step 89,90,91,100*/
+  .arm.left{
+    top:35%;
+    left:5%;
+    transform-origin:0% 0%;
+    transform:rotate(130deg) scaleX(-1);
+    animation-name:wave;
+    animation-duration:3s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+  }
+  
+  /*Step 89,92*/
+  .arm.right{
+    top:0%;
+    right:-5%;
+    transform: rotate(-45deg);
+  }
+
+  /*Step 80,81,85*/
+  .foot{
+    width:15%;
+    height:30%;
+    background-color: var(--penguin-picorna);
+    top:85%;
+    border-radius: 50%;
+    z-index:-1;
+  }
+
+  /*Step 83,84*/
+  .foot.left{
+    left:25%;
+    transform: rotate(80deg);
+  }
+  
+  /*Step 83,84*/
+  .foot.right{
+    right:25%;
+    transform: rotate(-80deg);
+  }
+
+    /*Step 7,8,9,18,104*/
   .ground{
     width: 100vw;
-    height: 400px;
+    height: calc(100vh - 300px);
     background: linear-gradient(90deg, rgb(88, 175, 236), rgb(182, 255, 255));
     z-index:3;
     position:absolute;
     margin-top:-58x;
+  }
+
+  /*Step 95,96,97,98,99*/
+  @keyframes wave{
+
+    10%{
+      transform: rotate(110deg) scaleX(-1);
+    }
+    20%{
+      transform: rotate(130deg) scaleX(-1);
+    }
+    30%{
+      transform: rotate(110deg) scaleX(-1);
+    }
+    40%{
+      transform: rotate(130deg) scaleX(-1);
+    }
+    
   }
