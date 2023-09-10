@@ -102,6 +102,42 @@ body{
       border-radius:70% 70% 100% 100%;
     }
 
+    /*Step 57,58*/
+    .eye{
+      width:15%;
+      height:17%;
+      background-color:black;
+      top:45%;
+      border-radius:50% 50% 50% 50%;
+    }
+
+    /*Step 59*/
+    .eye.left{
+      left:25%;
+    }
+
+    /*Step 59*/
+    .eye.right{
+      right:25%;
+    }
+
+    /*Step 61,62*/
+    .eye-lid{
+      width:150%;
+      height:100%;
+      background-color:var(--penguin-face);
+      top:25%;
+      left:-23%;
+      border-radius: 50%;
+    }
+
+    /*Step 64*/
+    .blush{
+      width: 15%;
+      height: 10%;
+      background:pink;
+    }
+
   /*Step 32,33,36*/
   .penguin-body{
   width: 53%;
